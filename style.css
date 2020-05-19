@@ -1,0 +1,407 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* roboto-300 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url("./fonts/roboto-v20-latin-300.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./fonts/roboto-v20-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"),
+    url("./fonts/roboto-v20-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./fonts/roboto-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("./fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./fonts/montserrat-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("./fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./fonts/montserrat-v14-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+.header {
+  background-image: url(./mobilepic.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 545px;
+}
+
+.top-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.log-in,
+.sign-up {
+  display: inline-block;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  width: 94px;
+  height: 40px;
+  background-color: transparent;
+  border-style: none;
+  outline: none;
+}
+
+.log-in:hover,
+.sign-up:hover {
+  border-radius: 20px;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 165px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  padding-top: 120px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 38px;
+}
+
+.sub-main-title {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 300;
+  width: 224px;
+  margin: 0 auto;
+  margin-top: 22px;
+  margin-bottom: 18px;
+}
+
+.find-partner-button {
+  display: block;
+  border-radius: 20px;
+  background-color: rgb(255, 78, 80);
+  width: 282px;
+  height: 40px;
+  border: none;
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+}
+
+.team-title {
+  margin-top: 70px;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.team-list-item {
+  margin: 0 auto;
+  text-align: center;
+  width: 196px;
+}
+
+.partner-image-wrapper {
+  max-width: 120px;
+  height: auto;
+  position: relative;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.partner-image-wrapper::after {
+  content: "";
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: -2px;
+  bottom: -10px;
+  background-image: url(./icons/tv.png);
+  background-color: #ff4e50;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+}
+
+.icon-chemistry::after {
+  background-image: url(./icons/chemistry.png);
+  background-color: #ffa507;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-cup::after {
+  background-image: url(./icons/cup.png);
+  background-color: #1cd7ad;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-plane::after {
+  background-image: url(./icons/plane.png);
+  background-color: #4e73db;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.team-image {
+  border-radius: 50%;
+}
+
+.team-name {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+.team-description {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(102, 102, 102);
+  line-height: 1.2;
+  margin-top: 17px;
+  margin-bottom: 22px;
+}
+
+.other-partners {
+  display: block;
+  border-radius: 20px;
+  background-color: transparent;
+  width: 282px;
+  height: 40px;
+  border: 2px solid rgb(255, 78, 80);
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 78, 80);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 55px;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 680px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .top-buttons-logo-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .header {
+    background-image: url(./tablet-image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 545px;
+    background-color: rgb(26, 25, 21);
+  }
+
+  .find-partner-button {
+    width: 236px;
+  }
+
+  .logo {
+    padding-left: 40px;
+  }
+
+  .top-buttons-wrapper {
+    padding-right: 40px;
+  }
+
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 492px;
+    margin: 0 auto;
+  }
+
+  .team-list-item {
+    margin-bottom: 36px;
+  }
+
+  .team-list-item:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding-top: 28px;
+  }
+
+  .team-title {
+    margin-bottom: 30px;
+  }
+
+  .main-title {
+    margin-top: 130px;
+  }
+
+  .team-list-item:nth-of-type(2) {
+    order: 3;
+  }
+
+  .team-list-item:nth-of-type(4) {
+    order: 4;
+  }
+
+  .main-title {
+    font-size: 52px;
+    width: 504px;
+    margin-bottom: 2px;
+    margin: 0 auto;
+    margin-top: 150px;
+  }
+
+  .sub-main-title {
+    font-size: 24px;
+    width: 492px;
+    margin-bottom: 26px;
+  }
+
+  .other-partners {
+    width: 196px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    background-image: url(./mainpic.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 545px;
+    background-color: rgb(26, 25, 21);
+  }
+
+  .container {
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .find-partner-button {
+    width: 225px;
+  }
+
+  .team-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 960px;
+  }
+}
